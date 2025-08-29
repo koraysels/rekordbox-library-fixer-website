@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Download, Github, Heart } from "lucide-react"
+import { Github, Heart } from "lucide-react"
+import { DownloadButton } from "./download-button"
+import { PlatformSelector } from "./platform-selector"
 
 export function CTASection() {
   return (
@@ -14,23 +16,19 @@ export function CTASection() {
               source.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-              <Button size="lg" asChild className="text-lg px-8 py-6">
-                <a
-                  href="https://github.com/koraysels/rekordbox-library-fixer/releases/latest"
-                  className="flex items-center gap-2"
-                >
-                  <Download className="h-5 w-5" />
-                  Download
-                </a>
-              </Button>
+            <div className="flex flex-col gap-6 justify-center items-center mb-8">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <DownloadButton size="lg" className="text-lg px-8 py-6" />
 
-              <Button variant="outline" size="lg" asChild className="text-lg px-8 py-6 bg-transparent">
-                <a href="https://github.com/koraysels/rekordbox-library-fixer" className="flex items-center gap-2">
-                  <Github className="h-5 w-5" />
-                  View Source
-                </a>
-              </Button>
+                <Button variant="outline" size="lg" asChild className="text-lg px-8 py-6 bg-transparent">
+                  <a href="https://github.com/koraysels/rekordbox-library-fixer" className="flex items-center gap-2">
+                    <Github className="h-5 w-5" />
+                    View Source
+                  </a>
+                </Button>
+              </div>
+              
+              <PlatformSelector />
             </div>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm text-muted-foreground">

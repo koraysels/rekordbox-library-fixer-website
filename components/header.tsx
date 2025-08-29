@@ -1,10 +1,10 @@
 "use client"
 
 import { useState } from "react"
-import { Button } from "@/components/ui/button"
 import { Menu, X, ExternalLink } from "lucide-react"
 import Image from "next/image"
 import { getAssetPath } from "@/lib/utils"
+import { DownloadButton } from "./download-button"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -31,9 +31,7 @@ export function Header() {
             >
               GitHub <ExternalLink className="h-3 w-3" />
             </a>
-            <Button asChild>
-              <a href="https://github.com/koraysels/rekordbox-library-fixer/releases">Download</a>
-            </Button>
+            <DownloadButton />
           </nav>
 
           {/* Mobile Menu Button */}
@@ -55,9 +53,7 @@ export function Header() {
               >
                 GitHub <ExternalLink className="h-3 w-3" />
               </a>
-              <Button asChild className="w-fit">
-                <a href="https://github.com/koraysels/rekordbox-library-fixer/releases">Download</a>
-              </Button>
+              <DownloadButton className="w-fit" />
             </nav>
           </div>
         )}

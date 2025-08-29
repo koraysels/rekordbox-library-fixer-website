@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Download, Github, Star } from "lucide-react"
+import { Github, Star } from "lucide-react"
 import Image from "next/image"
 import { getAssetPath } from "@/lib/utils"
+import { DownloadButton } from "./download-button"
+import { PlatformSelector } from "./platform-selector"
 
 export function HeroSection() {
   return (
@@ -26,28 +28,24 @@ export function HeroSection() {
             and organize your music collection.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button size="lg" asChild className="text-lg px-8 py-6 font-te-mono tracking-te-mono">
-              <a
-                href="https://github.com/koraysels/rekordbox-library-fixer/releases/latest"
-                className="flex items-center gap-2"
-              >
-                <Download className="h-5 w-5" />
-                DOWNLOAD
-              </a>
-            </Button>
+          <div className="flex flex-col gap-6 justify-center items-center mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <DownloadButton size="lg" className="text-lg px-8 py-6" />
 
-            <Button
-              variant="outline"
-              size="lg"
-              asChild
-              className="text-lg px-8 py-6 bg-transparent font-te-mono tracking-te-mono"
-            >
-              <a href="https://github.com/koraysels/rekordbox-library-fixer" className="flex items-center gap-2">
-                <Github className="h-5 w-5" />
-                SOURCE CODE
-              </a>
-            </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                asChild
+                className="text-lg px-8 py-6 bg-transparent font-te-mono tracking-te-mono"
+              >
+                <a href="https://github.com/koraysels/rekordbox-library-fixer" className="flex items-center gap-2">
+                  <Github className="h-5 w-5" />
+                  SOURCE CODE
+                </a>
+              </Button>
+            </div>
+            
+            <PlatformSelector />
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm text-muted-foreground font-te-mono">
