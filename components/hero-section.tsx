@@ -15,9 +15,14 @@ export function HeroSection() {
             <Image src={getAssetPath("/icons/128x128.png")} alt="Rekordbox Library Fixer" width={128} height={128} className="rounded-te-lg" />
           </div>
 
-          <Badge variant="secondary" className="mb-6 font-te-mono text-xs tracking-te-mono">
-            FREE & OPEN SOURCE
-          </Badge>
+          <div className="flex flex-col sm:flex-row gap-3 items-center justify-center mb-6">
+            <Badge variant="secondary" className="font-te-mono text-xs tracking-te-mono">
+              FREE & OPEN SOURCE
+            </Badge>
+            <Badge variant="outline" className="font-te-mono text-xs tracking-te-mono border-accent text-accent">
+              ⚠️ ALPHA VERSION - TESTING PHASE
+            </Badge>
+          </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-te-display font-bold text-balance mb-6 tracking-te-display">
             REKORDBOX LIBRARY FIXER
