@@ -2,8 +2,8 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
-  basePath: '/rekordbox-library-fixer',
-  assetPrefix: '/rekordbox-library-fixer',
+  basePath: '/rekordbox-library-fixer-website',
+  assetPrefix: '/rekordbox-library-fixer-website',
   eslint: {
     ignoreDuringBuilds: true,
   },
