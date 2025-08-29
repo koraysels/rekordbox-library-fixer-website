@@ -1,9 +1,11 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production'
+
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
-  basePath: '/rekordbox-library-fixer-website',
-  assetPrefix: '/rekordbox-library-fixer-website',
+  basePath: isProd ? '/rekordbox-library-fixer-website' : '',
+  assetPrefix: isProd ? '/rekordbox-library-fixer-website' : '',
   eslint: {
     ignoreDuringBuilds: true,
   },
