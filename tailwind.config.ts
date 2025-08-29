@@ -12,6 +12,11 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+  		fontFamily: {
+  			'display': ['Orbitron', 'monospace'],
+  			'mono': ['Space Mono', 'monospace'],
+  			'sans': ['Space Mono', 'monospace'],
+  		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
