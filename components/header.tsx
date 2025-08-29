@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X, ExternalLink } from "lucide-react"
 import Image from "next/image"
+import { getAssetPath } from "@/lib/utils"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -13,7 +14,7 @@ export function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center space-x-2">
-            <Image src="/icon.png" alt="Rekordbox Library Fixer" width={32} height={32} className="rounded-lg" />
+            <Image src={getAssetPath("/icons/32x32.png")} alt="Rekordbox Library Fixer" width={32} height={32} className="rounded-lg" />
             <span className="font-bold text-xl text-foreground font-te-display tracking-te-display">
               Rekordbox Library Fixer
             </span>

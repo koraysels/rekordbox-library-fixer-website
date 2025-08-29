@@ -65,6 +65,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="antialiased">
       <head>
+        <link rel="icon" href="/rekordbox-library-fixer-website/icons/icon.ico" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/rekordbox-library-fixer-website/icons/16x16.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/rekordbox-library-fixer-website/icons/32x32.png" />
+        <link rel="apple-touch-icon" sizes="128x128" href="/rekordbox-library-fixer-website/icons/128x128.png" />
         <link
           href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Space+Mono:wght@400;700&display=swap"
           rel="stylesheet"

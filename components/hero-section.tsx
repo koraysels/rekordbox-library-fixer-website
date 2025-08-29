@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Download, Github, Star } from "lucide-react"
 import Image from "next/image"
+import { getAssetPath } from "@/lib/utils"
 
 export function HeroSection() {
   return (
@@ -9,7 +10,7 @@ export function HeroSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-4xl mx-auto">
           <div className="mb-8 flex justify-center">
-            <Image src="/icon.png" alt="Rekordbox Library Fixer" width={80} height={80} className="rounded-te-lg" />
+            <Image src={getAssetPath("/icons/128x128.png")} alt="Rekordbox Library Fixer" width={128} height={128} className="rounded-te-lg" />
           </div>
 
           <Badge variant="secondary" className="mb-6 font-te-mono text-xs tracking-te-mono">
