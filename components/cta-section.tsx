@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { Github, Heart } from "lucide-react"
 import { DownloadButton } from "./download-button"
@@ -10,10 +11,15 @@ export function CTASection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <Card className="relative overflow-hidden">
           <CardContent className="p-12 text-center">
+            <div className="flex justify-center mb-4">
+              <Badge variant="outline" className="font-te-mono text-xs tracking-te-mono border-accent text-accent">
+                ⚠️ ALPHA VERSION - TESTING PHASE
+              </Badge>
+            </div>
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-te-display tracking-te-display">Give It a Try</h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto text-pretty">
               If you're dealing with duplicate tracks or missing files in Rekordbox, this might help. It's free and open
-              source.
+              source. <strong>Currently in alpha testing</strong> - please report any issues you encounter.
             </p>
 
             <div className="flex flex-col gap-6 justify-center items-center mb-8">
