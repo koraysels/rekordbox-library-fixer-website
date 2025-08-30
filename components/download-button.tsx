@@ -26,8 +26,10 @@ export function DownloadButton({
   const [isLoading, setIsLoading] = useState(false)
 
   useEffect(() => {
+    // Only run on client side to avoid hydration mismatches
     setMounted(true)
-    setPlatform(detectPlatform())
+    const detectedPlatform = detectPlatform()
+    setPlatform(detectedPlatform)
   }, [])
 
   const handleDownloadClick = async () => {
@@ -53,12 +55,25 @@ export function DownloadButton({
     }
   }
 
-  const buttonText = mounted 
-    ? `Download for ${getPlatformName(platform)}`
-    : 'Download'
+  // Show loading state until platform is detected
+  if (!mounted) {
+    return (
+      <Button 
+        size={size} 
+        variant={variant}
+        disabled={false}
+        className={`font-te-mono tracking-te-mono ${className}`}
+      >
+        {showIcon && <Download className="h-5 w-5 mr-2" />}
+        Download
+      </Button>
+    )
+  }
+
+  const buttonText = `Download for ${getPlatformName(platform)}`
 
   // Show mobile notice instead of download button for mobile users
-  if (mounted && platform === 'mobile') {
+  if (platform === 'mobile') {
     return <MobileNotice size={size} className={className} />
   }
 

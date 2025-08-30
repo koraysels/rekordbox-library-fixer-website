@@ -13,26 +13,30 @@ interface GitHubRelease {
 export function detectPlatform(): Platform {
   if (typeof window === 'undefined') return 'unknown'
   
-  const os = platform.os?.family?.toLowerCase() || ''
-  
-  // Check for mobile platforms first
-  if (os.includes('ios') || os.includes('android') || os.includes('windows phone')) {
-    return 'mobile'
-  }
-  
-  // Platform.js recognizes Mac as "OS X" or "macOS"
-  if (os.includes('os x') || os.includes('macos') || os === 'darwin') {
-    return 'mac'
-  }
-  
-  // Windows family includes all Windows versions
-  if (os.includes('windows')) {
-    return 'windows'
-  }
-  
-  // Linux family (excluding Android)
-  if (os.includes('linux') || os.includes('ubuntu') || os.includes('debian') || os.includes('fedora')) {
-    return 'linux'
+  try {
+    const os = platform.os?.family?.toLowerCase() || ''
+    
+    // Check for mobile platforms first
+    if (os.includes('ios') || os.includes('android') || os.includes('windows phone')) {
+      return 'mobile'
+    }
+    
+    // Platform.js recognizes Mac as "OS X" or "macOS"
+    if (os.includes('os x') || os.includes('macos') || os === 'darwin') {
+      return 'mac'
+    }
+    
+    // Windows family includes all Windows versions
+    if (os.includes('windows')) {
+      return 'windows'
+    }
+    
+    // Linux family (excluding Android)
+    if (os.includes('linux') || os.includes('ubuntu') || os.includes('debian') || os.includes('fedora')) {
+      return 'linux'
+    }
+  } catch (error) {
+    console.warn('Platform detection failed:', error)
   }
   
   return 'unknown'

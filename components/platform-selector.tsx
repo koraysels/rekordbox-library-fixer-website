@@ -47,14 +47,18 @@ export function PlatformSelector() {
   const [selectedPlatform, setSelectedPlatform] = useState<Platform | null>(null)
   const [isLoading, setIsLoading] = useState(false)
   const [releaseVersion, setReleaseVersion] = useState<string>('')
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    setMounted(true)
     setCurrentPlatform(detectPlatform())
     // Fetch the latest release version for display
     getLatestRelease().then(release => {
       if (release) {
         setReleaseVersion(release.tag_name)
       }
+    }).catch(() => {
+      // Silently handle error, fallback already in place
     })
   }, [])
 
@@ -97,6 +101,11 @@ export function PlatformSelector() {
     } finally {
       setIsLoading(false)
     }
+  }
+
+  // Don't render until mounted to avoid hydration issues
+  if (!mounted) {
+    return null
   }
 
   const otherPlatforms = platformOptions.filter(opt => opt.platform !== currentPlatform)
