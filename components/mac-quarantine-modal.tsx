@@ -47,6 +47,15 @@ export function MacQuarantineModal({ open, onOpenChange, onContinueDownload }: M
         </DialogHeader>
 
         <div className="space-y-4 py-4">
+          <Alert variant="default" className="border-accent/50">
+            <AlertCircle className="h-4 w-4 text-accent" />
+            <AlertDescription className="font-te-sans">
+              <strong>⚠️ Alpha Version Notice:</strong> This software is currently in alpha testing phase. 
+              While functional, it may contain bugs. Please backup your Rekordbox library before use and 
+              report any issues on GitHub.
+            </AlertDescription>
+          </Alert>
+
           <Alert>
             <AlertCircle className="h-4 w-4" />
             <AlertDescription className="font-te-sans">

@@ -1,6 +1,6 @@
 import platform from 'platform'
 
-export type Platform = 'mac' | 'windows' | 'linux' | 'unknown'
+export type Platform = 'mac' | 'windows' | 'linux' | 'mobile' | 'unknown'
 
 interface GitHubRelease {
   tag_name: string
@@ -14,6 +14,11 @@ export function detectPlatform(): Platform {
   if (typeof window === 'undefined') return 'unknown'
   
   const os = platform.os?.family?.toLowerCase() || ''
+  
+  // Check for mobile platforms first
+  if (os.includes('ios') || os.includes('android') || os.includes('windows phone')) {
+    return 'mobile'
+  }
   
   // Platform.js recognizes Mac as "OS X" or "macOS"
   if (os.includes('os x') || os.includes('macos') || os === 'darwin') {
@@ -99,6 +104,8 @@ export function getPlatformName(platform: Platform): string {
       return 'Windows'
     case 'linux':
       return 'Linux'
+    case 'mobile':
+      return 'Mobile'
     default:
       return 'Download'
   }

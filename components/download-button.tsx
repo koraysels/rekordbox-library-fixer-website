@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Download, Loader2 } from "lucide-react"
 import { MacQuarantineModal } from "./mac-quarantine-modal"
+import { MobileNotice } from "./mobile-notice"
 import { detectPlatform, getDownloadUrl, getPlatformName, type Platform } from "@/lib/platform"
 
 interface DownloadButtonProps {
@@ -55,6 +56,11 @@ export function DownloadButton({
   const buttonText = mounted 
     ? `Download for ${getPlatformName(platform)}`
     : 'Download'
+
+  // Show mobile notice instead of download button for mobile users
+  if (mounted && platform === 'mobile') {
+    return <MobileNotice size={size} className={className} />
+  }
 
   return (
     <>

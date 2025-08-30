@@ -101,6 +101,11 @@ export function PlatformSelector() {
 
   const otherPlatforms = platformOptions.filter(opt => opt.platform !== currentPlatform)
 
+  // Don't show platform selector for mobile users
+  if (currentPlatform === 'mobile') {
+    return null
+  }
+
   return (
     <div className="flex flex-col items-center gap-3">
       <div className="flex items-center gap-2 text-sm text-muted-foreground font-te-mono">

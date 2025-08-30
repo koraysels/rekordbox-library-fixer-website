@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="147d5904-4307-4abf-ac82-cf4b3b7a2144" name="Changes" comment="add platform spcific direct links">
-      <change beforePath="$PROJECT_DIR$/components/hero-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/hero-section.tsx" afterDir="false" />
+    <list default="true" id="147d5904-4307-4abf-ac82-cf4b3b7a2144" name="Changes" comment="add alpha release badge">
+      <change beforePath="$PROJECT_DIR$/components/mac-quarantine-modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/mac-quarantine-modal.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +91,7 @@
       <updated>1756495314936</updated>
       <workItem from="1756495316251" duration="708000" />
       <workItem from="1756496037234" duration="16000" />
-      <workItem from="1756496059092" duration="2719000" />
+      <workItem from="1756496059092" duration="3324000" />
     </task>
     <task id="LOCAL-00001" summary="fix github deploy">
       <option name="closed" value="true" />
@@ -141,7 +141,23 @@
       <option name="project" value="LOCAL" />
       <updated>1756498638767</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add alpha release badge">
+      <option name="closed" value="true" />
+      <created>1756498822097</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1756498822098</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add alpha release badge">
+      <option name="closed" value="true" />
+      <created>1756498828318</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1756498828318</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,6 +180,7 @@
     <MESSAGE value="fix github deploy styles" />
     <MESSAGE value="fixe icon display being messed up" />
     <MESSAGE value="add platform spcific direct links" />
-    <option name="LAST_COMMIT_MESSAGE" value="add platform spcific direct links" />
+    <MESSAGE value="add alpha release badge" />
+    <option name="LAST_COMMIT_MESSAGE" value="add alpha release badge" />
   </component>
 </project>
