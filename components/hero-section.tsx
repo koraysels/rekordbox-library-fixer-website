@@ -29,8 +29,8 @@ export function HeroSection() {
           </h1>
 
           <p className="text-xl text-muted-foreground text-pretty mb-8 max-w-2xl mx-auto font-te-sans">
-            A collection of tools to help clean up your Rekordbox DJ library. Find duplicates, relocate missing tracks,
-            and organize your music collection.
+            Clean up your Rekordbox library for real. Find duplicates, bring back the "!" tracks, and clear out
+            entries pointing at nothing — written straight into rekordbox's own database, with a backup first.
           </p>
 
           <div className="flex flex-col gap-6 justify-center items-center mb-12">

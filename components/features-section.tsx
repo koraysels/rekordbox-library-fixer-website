@@ -1,42 +1,48 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Search, Zap, Shield, RefreshCw, Database, Settings } from "lucide-react"
+import { Search, Shield, RefreshCw, Database, Music, History } from "lucide-react"
 
 const features = [
   {
+    icon: Database,
+    title: "Writes Into Rekordbox",
+    description:
+      "Cleans rekordbox's own master.db. An XML import can add and update tracks but never remove one, so fixes made through XML never reach your collection.",
+    badge: "New",
+  },
+  {
     icon: Search,
     title: "Duplicate Detection",
-    description: "Find duplicate tracks in your library using metadata comparison and audio analysis.",
+    description:
+      "Finds duplicates by audio fingerprint, falling back to artist, title and length when a file is gone. Tells apart several entries for one file and genuinely duplicated files.",
     badge: null,
   },
   {
     icon: RefreshCw,
     title: "Track Relocation",
-    description: 'Locate and fix missing tracks that appear as "!" in your Rekordbox library.',
-    badge: null,
-  },
-  {
-    icon: Database,
-    title: "Library Analysis",
-    description: "Analyze your music collection and get insights about your library organization.",
+    description:
+      'Finds the files behind the "!" tracks again, thousands at a time, and writes the new paths back into your library — including straight into master.db.',
     badge: null,
   },
   {
     icon: Shield,
-    title: "Safe Operations",
-    description: "All operations are designed to be non-destructive. Your original files remain untouched.",
+    title: "Backed Up, Every Time",
+    description:
+      "A backup before every change, restorable from the app. Files go to the system trash, never straight to deletion, and a file a kept track still uses is never touched.",
     badge: null,
   },
   {
-    icon: Settings,
-    title: "Configurable",
-    description: "Adjust settings and detection rules to match your specific workflow and preferences.",
+    icon: Music,
+    title: "Listen Before You Decide",
+    description:
+      "Play, pause, seek and set the volume from any track row, so you can hear which copy to keep without leaving the app. AIFF included.",
     badge: null,
   },
   {
-    icon: Zap,
-    title: "Lightweight",
-    description: "Simple tools that do their job without unnecessary complexity or bloat.",
+    icon: History,
+    title: "Nothing Happens Silently",
+    description:
+      "Every change is recorded with per-track detail and the backup it came from. Streaming tracks are labelled and never treated as damage.",
     badge: null,
   },
 ]
@@ -48,7 +54,7 @@ export function FeaturesSection() {
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-te-display font-bold mb-4 tracking-te-display">WHAT IT DOES</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty font-te-sans">
-            Simple tools to help maintain and organize your Rekordbox music library.
+            Cleans up the collection rekordbox actually reads, with a backup before every change.
           </p>
         </div>
 
