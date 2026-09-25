@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Search, Shield, RefreshCw, Database, Music, History } from "lucide-react"
+import { Search, Shield, RefreshCw, Database, Music, History, KeyRound } from "lucide-react"
 
 const features = [
   {
@@ -28,7 +28,7 @@ const features = [
     icon: Shield,
     title: "Backed Up, Every Time",
     description:
-      "A backup before every change, restorable from the app. Files go to the system trash, never straight to deletion, and a file a kept track still uses is never touched.",
+      "A backup before every change, checked against the original so a truncated copy is refused rather than trusted, and restorable from the app. Files go to the system trash, never straight to deletion.",
     badge: null,
   },
   {
@@ -42,8 +42,15 @@ const features = [
     icon: History,
     title: "Nothing Happens Silently",
     description:
-      "Every change is recorded with per-track detail and the backup it came from. Streaming tracks are labelled and never treated as damage.",
+      "Every change is recorded with per-track detail and the backup it came from. Streaming tracks are labelled and never treated as damage — and never counted as missing.",
     badge: null,
+  },
+  {
+    icon: KeyRound,
+    title: "No Key To Hunt Down",
+    description:
+      "Rekordbox encrypts its database. The app ships no key: it shows the one-line command for your platform that prints it on your own machine, from an open-source package you can read.",
+    badge: "New",
   },
 ]
 
