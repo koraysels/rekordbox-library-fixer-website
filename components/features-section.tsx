@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Search, Shield, RefreshCw, Database, Music, History, KeyRound } from "lucide-react"
+import { Search, Shield, RefreshCw, Database, Music, History, KeyRound, Eraser } from "lucide-react"
 
 const features = [
   {
@@ -22,6 +22,13 @@ const features = [
     title: "Track Relocation",
     description:
       'Finds the files behind the "!" tracks again, thousands at a time, and writes the new paths back into your library — including straight into master.db.',
+    badge: null,
+  },
+  {
+    icon: Eraser,
+    title: "Clear Out The Dead Weight",
+    description:
+      "Entries pointing at a folder, at a path cut short by a bad import, or at nothing at all — found and removed from the collection and every playlist. Files that are simply gone are opt-in, because relocating them is usually the better answer.",
     badge: null,
   },
   {
