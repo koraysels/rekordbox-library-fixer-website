@@ -1,14 +1,35 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Search, Shield, RefreshCw, Database, Music, History, KeyRound, Eraser } from "lucide-react"
+import { Search, Shield, RefreshCw, Database, Music, History, KeyRound, Eraser, Wand2, Usb, AudioWaveform, FolderInput } from "lucide-react"
 
 const features = [
+  {
+    icon: Wand2,
+    title: "Fix My Library",
+    description:
+      "One check, a short summary, then one confirm per step: find moved tracks, remove entries that point at nothing, merge sure duplicates, gather files into your music folder, convert for your player. Anything it isn't sure about is set aside for you to look at. The full tools stay one click away in Advanced.",
+    badge: "New",
+  },
+  {
+    icon: Usb,
+    title: "Check Your USB Stick",
+    description:
+      "Playlists empty or half full on the CDJ? Rekordbox skips every track it can't read during a sync, without a word. The app compares a stick with your library and tells you per playlist what's missing and why: a drive that wasn't plugged in, a file that's gone, a streaming track. It only reads the stick.",
+    badge: "New",
+  },
+  {
+    icon: AudioWaveform,
+    title: "Convert For Older Players",
+    description:
+      "Pick the oldest player you play on and see every track it can't load: FLAC, ALAC, 32-bit or 96 kHz files. Convert them to AIFF, WAV or MP3 and the library entry switches to the new file, so cues, loops, beatgrids and playlists stay attached.",
+    badge: null,
+  },
   {
     icon: Database,
     title: "Writes Into Rekordbox",
     description:
       "Cleans rekordbox's own master.db. An XML import can add and update tracks but never remove one, so fixes made through XML never reach your collection.",
-    badge: "New",
+    badge: null,
   },
   {
     icon: Search,
@@ -54,10 +75,17 @@ const features = [
   },
   {
     icon: KeyRound,
-    title: "No Key To Hunt Down",
+    title: "No Key To Paste",
     description:
-      "Rekordbox encrypts its database. The app ships no key: it shows the one-line command for your platform that prints it on your own machine, from an open-source package you can read.",
-    badge: "New",
+      "Rekordbox encrypts its database. The key now comes with the app, so it opens your library straight away. If a rekordbox update ever changes it, the app shows the one-line command that prints the new one on your own machine.",
+    badge: null,
+  },
+  {
+    icon: FolderInput,
+    title: "Everything In One Folder",
+    description:
+      "Tracks scattered over Downloads, the desktop and old drives are moved into your music folder and the library follows. A file is never overwritten: an identical one is reused, a different one gets a (2).",
+    badge: null,
   },
 ]
 
@@ -68,7 +96,7 @@ export function FeaturesSection() {
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-te-display font-bold mb-4 tracking-te-display">WHAT IT DOES</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty font-te-sans">
-            Cleans up the collection rekordbox actually reads, with a backup before every change.
+            Cleans up the collection rekordbox actually reads, with a backup before every change. Start with the wizard, or open Advanced for every tool.
           </p>
         </div>
 

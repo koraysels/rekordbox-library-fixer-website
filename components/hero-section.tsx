@@ -29,8 +29,9 @@ export function HeroSection() {
           </h1>
 
           <p className="text-xl text-muted-foreground text-pretty mb-8 max-w-2xl mx-auto font-te-sans">
-            Clean up your Rekordbox library for real. Find duplicates, bring back the "!" tracks, and clear out
-            entries pointing at nothing — written straight into rekordbox's own database, with a backup first.
+            Fix your Rekordbox library in one go. A wizard finds the "!" tracks, clears out dead entries, merges
+            duplicates and converts what your CDJ can't play — written straight into rekordbox's own database,
+            with a backup before every step. And it shows why your USB stick's playlists came out half empty.
           </p>
 
           <div className="flex flex-col gap-6 justify-center items-center mb-12">
