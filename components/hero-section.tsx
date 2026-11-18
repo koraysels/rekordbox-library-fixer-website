@@ -29,9 +29,9 @@ export function HeroSection() {
           </h1>
 
           <p className="text-xl text-muted-foreground text-pretty mb-8 max-w-2xl mx-auto font-te-sans">
-            Fix your Rekordbox library in one go. A wizard finds the "!" tracks, clears out dead entries, merges
-            duplicates and converts what your CDJ can't play — written straight into rekordbox's own database,
-            with a backup before every step. And it shows why your USB stick's playlists came out half empty.
+            A free app that fixes your rekordbox library. It finds the "!" tracks, removes dead entries, merges
+            duplicates and converts files your CDJ can't play. Changes go straight into rekordbox's database, with
+            a backup before each step. It can also tell you why the playlists on your USB stick came out half empty.
           </p>
 
           <div className="flex flex-col gap-6 justify-center items-center mb-12">
@@ -79,7 +79,7 @@ export function HeroSection() {
                   className="w-full rounded-te-lg shadow-lg"
                 />
                 <p className="text-sm text-muted-foreground mt-4 font-te-mono">
-                  Relocate missing tracks and fix your library automatically
+                  Relocating missing tracks
                 </p>
               </div>
             </div>

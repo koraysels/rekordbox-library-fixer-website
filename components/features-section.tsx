@@ -5,86 +5,86 @@ import { Search, Shield, RefreshCw, Database, Music, History, KeyRound, Eraser, 
 const features = [
   {
     icon: Wand2,
-    title: "Fix My Library",
+    title: "Fix my library",
     description:
-      "One check, a short summary, then one confirm per step: find moved tracks, remove entries that point at nothing, merge sure duplicates, gather files into your music folder, convert for your player. Anything it isn't sure about is set aside for you to look at. The full tools stay one click away in Advanced.",
+      "It checks your whole library and shows a short list of what's wrong. Then it goes through it one step at a time and you confirm each one: moved tracks, dead entries, duplicates, scattered files, and files your player can't load. Tracks it isn't sure about are left for you to look at.",
     badge: "New",
   },
   {
     icon: Usb,
-    title: "Check Your USB Stick",
+    title: "Check your USB stick",
     description:
-      "Playlists empty or half full on the CDJ? Rekordbox skips every track it can't read during a sync, without a word. The app compares a stick with your library and tells you per playlist what's missing and why: a drive that wasn't plugged in, a file that's gone, a streaming track. It only reads the stick.",
+      "Half your playlists empty on the CDJ? Rekordbox skips any track it can't read during a sync and doesn't tell you. Plug in the stick and the app lists, per playlist, which tracks didn't make it and why: a drive that wasn't plugged in, a file that's gone, or a streaming track. It only reads the stick.",
     badge: "New",
   },
   {
     icon: AudioWaveform,
-    title: "Convert For Older Players",
+    title: "Convert for older players",
     description:
-      "Pick the oldest player you play on and see every track it can't load: FLAC, ALAC, 32-bit or 96 kHz files. Convert them to AIFF, WAV or MP3 and the library entry switches to the new file, so cues, loops, beatgrids and playlists stay attached.",
+      "Pick the oldest player you use, say a CDJ-2000, and you get a list of every track it can't load: FLAC, ALAC, 32-bit or 96 kHz files. Convert them to AIFF, WAV or MP3. The library entry moves to the new file, so cues, loops, beatgrids and playlists stay put.",
     badge: null,
   },
   {
     icon: Database,
-    title: "Writes Into Rekordbox",
+    title: "Writes into rekordbox",
     description:
-      "Cleans rekordbox's own master.db. An XML import can add and update tracks but never remove one, so fixes made through XML never reach your collection.",
+      "It edits rekordbox's own master.db. An XML import can add and update tracks but can't remove one, so cleaning up through XML never reaches your collection.",
     badge: null,
   },
   {
     icon: Search,
-    title: "Duplicate Detection",
+    title: "Duplicate detection",
     description:
-      "Finds duplicates by audio fingerprint, falling back to artist, title and length when a file is gone. Tells apart several entries for one file and genuinely duplicated files.",
+      "Finds duplicates by audio fingerprint, or by artist, title and length when the file is gone. It also tells you whether you have two copies of a file or two entries for one file, so you know if deleting frees any space.",
     badge: null,
   },
   {
     icon: RefreshCw,
-    title: "Track Relocation",
+    title: "Track relocation",
     description:
-      'Finds the files behind the "!" tracks again, thousands at a time, and writes the new paths back into your library — including straight into master.db.',
+      "Finds the files behind the \"!\" tracks, thousands at a time if needed, and writes the new paths into master.db.",
     badge: null,
   },
   {
     icon: Eraser,
-    title: "Clear Out The Dead Weight",
+    title: "Remove dead entries",
     description:
-      "Entries pointing at a folder, at a path cut short by a bad import, or at nothing at all — found and removed from the collection and every playlist. Files that are simply gone are opt-in, because relocating them is usually the better answer.",
+      "Some entries point at a folder, at a path a bad import cut short, or at nothing. Those are removed from the collection and from every playlist. A track whose file is missing is only removed when nothing like it turns up on your drives.",
     badge: null,
   },
   {
     icon: Shield,
-    title: "Backed Up, Every Time",
+    title: "A backup before every change",
     description:
-      "A backup before every change, checked against the original so a truncated copy is refused rather than trusted, and restorable from the app. Files go to the system trash, never straight to deletion.",
+      "Each backup is checked against the original before anything gets written, so a half-copied one is caught instead of trusted. You can restore any of them from the app. Deleted files go to the Trash.",
     badge: null,
   },
   {
     icon: Music,
-    title: "Listen Before You Decide",
+    title: "Listen before you decide",
     description:
-      "Play, pause, seek and set the volume from any track row, so you can hear which copy to keep without leaving the app. AIFF included.",
+      "Play any track from its row to hear which copy to keep. AIFF works too.",
     badge: null,
   },
   {
     icon: History,
-    title: "Nothing Happens Silently",
+    title: "Every change is logged",
     description:
-      "Every change is recorded with per-track detail and the backup it came from. Streaming tracks are labelled and never treated as damage — and never counted as missing.",
+      "History lists each change track by track, with the backup taken before it. TIDAL and Spotify tracks are labelled as streaming and never counted as missing.",
     badge: null,
   },
   {
     icon: KeyRound,
-    title: "No Key To Paste",
+    title: "No key to paste",
     description:
-      "Rekordbox encrypts its database. The key now comes with the app, so it opens your library straight away. If a rekordbox update ever changes it, the app shows the one-line command that prints the new one on your own machine.",
+      "Rekordbox encrypts its database. The app now includes the key, so your library opens straight away. If a rekordbox update changes the key, the app shows a one-line command that prints the new one on your machine.",
     badge: null,
   },
   {
     icon: FolderInput,
-    title: "Everything In One Folder",
+    title: "One music folder",
     description:
-      "Tracks scattered over Downloads, the desktop and old drives are moved into your music folder and the library follows. A file is never overwritten: an identical one is reused, a different one gets a (2).",
+      "Tracks sitting in Downloads, on the desktop or on old drives are moved into your music folder, and the library follows. Nothing gets overwritten: if the same file is already there it's reused, and a different file with the same name gets a (2).",
     badge: null,
   },
 ]
@@ -96,7 +96,7 @@ export function FeaturesSection() {
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-te-display font-bold mb-4 tracking-te-display">WHAT IT DOES</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty font-te-sans">
-            Cleans up the collection rekordbox actually reads, with a backup before every change. Start with the wizard, or open Advanced for every tool.
+            It works on the library rekordbox actually reads and makes a backup before every change. Start with the wizard. Advanced has each tool on its own page.
           </p>
         </div>
 
@@ -133,7 +133,7 @@ export function FeaturesSection() {
           <div className="text-center mb-12">
             <h3 className="text-2xl font-te-display font-bold mb-4 tracking-te-display">SEE IT IN ACTION</h3>
             <p className="text-muted-foreground font-te-sans">
-              Screenshots from the actual application showing the tools at work
+              Screenshots from the app
             </p>
           </div>
 
@@ -146,7 +146,7 @@ export function FeaturesSection() {
                   className="w-full rounded-te border"
                 />
                 <p className="text-sm text-muted-foreground mt-3 font-te-mono">
-                  The track relocation tool finding and fixing missing files
+                  Relocating missing tracks
                 </p>
               </div>
 
@@ -157,7 +157,7 @@ export function FeaturesSection() {
                   className="w-full rounded-te border"
                 />
                 <p className="text-sm text-muted-foreground mt-3 font-te-mono">
-                  Duplicate detection finding similar tracks in your library
+                  Duplicates grouped into sets
                 </p>
               </div>
             </div>
@@ -170,7 +170,7 @@ export function FeaturesSection() {
                   className="w-full rounded-te border"
                 />
                 <p className="text-sm text-muted-foreground mt-3 font-te-mono">
-                  Clean, simple interface focused on getting the job done
+                  The list of missing tracks
                 </p>
               </div>
 
@@ -181,7 +181,7 @@ export function FeaturesSection() {
                   className="w-full rounded-te border"
                 />
                 <p className="text-sm text-muted-foreground mt-3 font-te-mono">
-                  Built-in help and tutorials to get you started quickly
+                  The built-in tutorial for XML libraries
                 </p>
               </div>
             </div>

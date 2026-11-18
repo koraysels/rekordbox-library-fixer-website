@@ -3,9 +3,9 @@ import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css"
 
 export const metadata = {
-  title: "Rekordbox Library Fixer - Clean Your DJ Library Effortlessly",
+  title: "Rekordbox Library Fixer: fix your rekordbox library",
   description:
-    "A free, open-source tool that fixes your Rekordbox library: relocate missing tracks, remove dead entries, merge duplicates, convert for older CDJs and check your USB sticks. Made by DJs, for DJs.",
+    "Free, open-source app that fixes your rekordbox library. It finds missing tracks, removes dead entries, merges duplicates, converts files for older CDJs and checks your USB sticks. Made by DJs, for DJs.",
   keywords: [
     "rekordbox",
     "dj library",
@@ -35,9 +35,9 @@ export const metadata = {
     locale: "en_US",
     url: "https://koraysels.github.io/rekordbox-library-fixer",
     siteName: "Rekordbox Library Fixer",
-    title: "Rekordbox Library Fixer - Clean Your DJ Library Effortlessly",
+    title: "Rekordbox Library Fixer: fix your rekordbox library",
     description:
-      "A free, open-source tool that fixes your Rekordbox library: relocate missing tracks, remove dead entries, merge duplicates, convert for older CDJs and check your USB sticks. Made by DJs, for DJs.",
+      "Free, open-source app that fixes your rekordbox library. It finds missing tracks, removes dead entries, merges duplicates, converts files for older CDJs and checks your USB sticks. Made by DJs, for DJs.",
     images: [
       {
         url: "https://raw.githubusercontent.com/koraysels/rekordbox-library-fixer/main/assets/icon.png",
@@ -49,9 +49,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rekordbox Library Fixer - Clean Your DJ Library Effortlessly",
+    title: "Rekordbox Library Fixer: fix your rekordbox library",
     description:
-      "A free, open-source tool that fixes your Rekordbox library: relocate missing tracks, remove dead entries, merge duplicates, convert for older CDJs and check your USB sticks. Made by DJs, for DJs.",
+      "Free, open-source app that fixes your rekordbox library. It finds missing tracks, removes dead entries, merges duplicates, converts files for older CDJs and checks your USB sticks. Made by DJs, for DJs.",
     images: ["https://raw.githubusercontent.com/koraysels/rekordbox-library-fixer/main/assets/icon.png"],
   },
   alternates: {
@@ -84,7 +84,7 @@ export default function RootLayout({
               "@type": "SoftwareApplication",
               name: "Rekordbox Library Fixer",
               description:
-                "A free, open-source tool that fixes your Rekordbox library: relocate missing tracks, remove dead entries, merge duplicates, convert for older CDJs and check your USB sticks. Made by DJs, for DJs.",
+                "Free, open-source app that fixes your rekordbox library. It finds missing tracks, removes dead entries, merges duplicates, converts files for older CDJs and checks your USB sticks. Made by DJs, for DJs.",
               url: "https://koraysels.github.io/rekordbox-library-fixer",
               downloadUrl: "https://github.com/koraysels/rekordbox-library-fixer/releases/latest",
               author: {
