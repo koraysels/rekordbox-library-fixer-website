@@ -74,12 +74,12 @@ export function HeroSection() {
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-te-xl blur-xl"></div>
               <div className="relative bg-card/80 backdrop-blur-sm border rounded-te-xl p-6">
                 <img
-                  src="https://raw.githubusercontent.com/koraysels/rekordbox-library-fixer/main/screenshots/04-track-relocation.png"
-                  alt="Track relocation tool in action"
+                  src={getAssetPath("/screenshots/wizard-check.png")}
+                  alt="The wizard after checking a library: missing tracks, duplicates, files the player can't play and files outside the music folder"
                   className="w-full rounded-te-lg shadow-lg"
                 />
                 <p className="text-sm text-muted-foreground mt-4 font-te-mono">
-                  Relocating missing tracks
+                  What the wizard found in one check
                 </p>
               </div>
             </div>

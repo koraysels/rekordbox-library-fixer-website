@@ -22,6 +22,9 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
+            <a href="#wizard" className="text-muted-foreground hover:text-foreground transition-colors">
+              Wizard
+            </a>
             <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">
               Features
             </a>
@@ -44,6 +47,9 @@ export function Header() {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t">
             <nav className="flex flex-col space-y-4">
+              <a href="#wizard" className="text-muted-foreground hover:text-foreground transition-colors">
+                Wizard
+              </a>
               <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">
                 Features
               </a>
