@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Search, Shield, RefreshCw, Database, Music, History, KeyRound, Eraser, Wand2, Usb, AudioWaveform, FolderInput } from "lucide-react"
+import { Search, Shield, RefreshCw, Database, Music, History, Eraser, Wand2, Usb, AudioWaveform, FolderInput } from "lucide-react"
 
 const features = [
   {
@@ -71,13 +71,6 @@ const features = [
     title: "Every change is logged",
     description:
       "History lists each change track by track, with the backup taken before it. TIDAL and Spotify tracks are labelled as streaming and never counted as missing.",
-    badge: null,
-  },
-  {
-    icon: KeyRound,
-    title: "No key to paste",
-    description:
-      "Rekordbox encrypts its database. The app now includes the key, so your library opens straight away. If a rekordbox update changes the key, the app shows a one-line command that prints the new one on your machine.",
     badge: null,
   },
   {
