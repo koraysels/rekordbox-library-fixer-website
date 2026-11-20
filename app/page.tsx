@@ -3,7 +3,6 @@ import { HeroSection } from "@/components/hero-section"
 import { WizardSection } from "@/components/wizard-section"
 import { FeaturesSection } from "@/components/features-section"
 import { RbsyncSection } from "@/components/rbsync-section"
-import { ContributeSection } from "@/components/contribute-section"
 import { CTASection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
 
@@ -16,7 +15,6 @@ export default function HomePage() {
         <WizardSection />
         <FeaturesSection />
         <RbsyncSection />
-        <ContributeSection />
         <CTASection />
       </main>
       <Footer />
